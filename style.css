@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --card-color: #02799D;
+  --text-color: #323238;
+  --bg-color: #FFF;
+  --bg-button-color: #E1E1E6;
+  --bg-button-color-blue: #02799D;
+}
+
+html.dark {
+  --bg-color: #000000;
+  --text-color: #FFF;
+  --bg-button-color: #323238;
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+    display: none;
+}
+
+html.dark .ph-tree .ph-cloud-snow .ph-storefront .ph-campfire{
+  --text-color: #FFF;
+  --bg-button-color: #404053;
+
+}
+
+.active-card {
+  background-color: var(--bg-button-color-blue) !important;
+}
+
+.flex { /*classe utilitária para usar em qualquer lugar*/
+  display: flex;  
+}
+
+/* Classe sr-only para acessibilidade: esconde visualmente o elemento, mas o mantém acessível para leitores de tela */
+.sr-only {
+  width: 1px; /* Largura mínima */
+  height: 1px; /* Altura mínima */
+  position: absolute; /* Posiciona absolutamente para removê-lo do fluxo normal do layout */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as dimensões mínimas */
+
+  margin: -1px; /* Evita que o elemento afete o layout quando posicionado absolutamente */
+  padding: 0px; /* Remove qualquer padding que possa afetar o tamanho do elemento */
+  appearance: none; /* Remove qualquer estilo padrão do navegador, como estilos de botão padrão em alguns navegadores */
+}
+
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 6.4rem; 
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.9rem;
+  align-content: center;
+}
+
+#toggle-mode {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 0;
+
+  color: var(--text-color);
+}
+
+#controls {
+  background: 0;
+  fill: white;
+  margin-top: 1.6rem;
+  padding: 0 4rem 0 0;
+  display: flex;
+  gap: 1.6rem;
+}
+
+#controls button {
+  background-color: transparent;
+  border: 0;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 6.4rem; 
+}
+
+.ph-tree, .ph-cloud-snow, .ph-storefront, .ph-campfire {
+  background-color: var(--bg-button-color-blue);
+  width: 138px;
+  height: 152px;
+  border-radius: 20px;
+}
+
+.sounds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.col-1,
+.col-2 {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#timer {
+  color: var(--text-color);
+  font-size: 12.6rem;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  margin-left: 0;
+}
+
+
+@media (max-width: 600px) {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.9rem;
+    height: 100vh;
+    text-align: center; 
+  }
+}
+
+.running .ph-play-circle,
+  html:not(.running) .ph-pause-circle {
+    display: none;
+}
+
+.sounds .ph-tree,
+html:not(.sounds) {
+  background-color: var(--bg-button-color)
+}
+
+.sounds .ph-cloud-snow,
+html:not(.sounds) {
+  background-color: var(--bg-button-color)
+}
+
+.sounds .ph-storefront,
+html:not(.sounds) {
+  background-color: var(--bg-button-color)
+}
+
+.sounds .ph-campfire,
+html:not(.sounds) {
+  background-color: var(--bg-button-color)
+}

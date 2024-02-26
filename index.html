@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro"> <!-- meta description para aparecer nos motores de busca e ajudar a encontrar o aplicativo na internet -->
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg"> <!--Para aparecer o ícone na aba da página-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+  <title>Focus Timer</title>
+</head>
+<body>
+  <div class="app-container">
+    <button id="toggle-mode">
+      <span class="sr-only">Ativar modo dark!</span>
+      <i class="ph ph-moon"></i>
+      <i class="ph ph-sun"></i>
+    </button>
+
+     <div class="timer-container">
+
+        <section id="timer" class="flex">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+
+      <section id="controls" class="flex">
+        <button data-action="togglePlaying" class="ph-bold ph-play-circle"></button>
+        <button data-action="togglePause" class="ph-bold ph-pause-circle"></button>
+        <button data-action="stop" class="ph-bold ph-stop-circle"></button>
+        <button data-action="plus" class="ph-bold ph-plus-circle"></button>
+        <button data-action="minus" class="ph-bold ph-minus-circle"></button>
+      </section>
+     </div>
+    
+    <div id="sounds" class="sounds">
+
+      <div class="col-1">
+        <button data-action="cardTree" class="ph-bold ph-tree"></button>
+        <button data-action="cardCloud" class="ph-bold ph-cloud-snow"></button>
+      </div> 
+
+      <div class="col-2">
+        <button data-action="cardStore" class="ph-bold ph-storefront"></button>
+        <button data-action="cardCampfire" class="ph-bold ph-campfire"></button>
+      </div>
+    </div>
+     
+  </div>
+
+</body>
+</html>
