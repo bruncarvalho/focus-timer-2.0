@@ -7,7 +7,7 @@ export function togglePlaying() {
   //se a classe 'running' estiver presente, isPlaying será definido como true; 
   state.isPlaying = document.documentElement.classList.toggle('running')
   timer.countdown()
-  // sounds.buttonPlay.play()
+  sounds.buttonPlay.play()
 }
 
 
